@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ylg-Q1-goe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8p5-Hj-mhr">
+            <objects>
+                <navigationController id="Ylg-Q1-goe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Jc-ef-i9e">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oI1-mQ-M9H" kind="relationship" relationship="rootViewController" id="FTf-98-wov"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRm-zh-qra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="159"/>
+        </scene>
+        <!--Animals Table Table View Controller-->
+        <scene sceneID="QDN-13-5ww">
+            <objects>
+                <tableViewController id="oI1-mQ-M9H" customClass="AnimalsTableTableViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nzr-fW-GWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Animal Cell" textLabel="riu-UP-kes" detailTextLabel="lp0-1D-xxg" style="IBUITableViewCellStyleSubtitle" id="B3e-iG-Gzi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B3e-iG-Gzi" id="N1E-Jr-Q1h">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="riu-UP-kes">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lp0-1D-xxg">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yYi-u8-UvC" kind="show" id="AcQ-Vf-SDn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oI1-mQ-M9H" id="lpx-Mi-gYW"/>
+                            <outlet property="delegate" destination="oI1-mQ-M9H" id="4Gd-pQ-hrU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ovc-mA-k5p"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIV-1j-4JV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="159"/>
+        </scene>
+        <!--Animal Detail View Controller-->
+        <scene sceneID="tbN-Oa-Jg8">
+            <objects>
+                <viewController id="yYi-u8-UvC" customClass="AnimalDetailViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dEy-Bx-cm4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Zv-re-57x">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="X8W-8d-MuK"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pCG-4w-oWX">
+                                <rect key="frame" x="20" y="301" width="335" height="346"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIX-zl-Gz8">
+                                <rect key="frame" x="166.5" y="272" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vIX-zl-Gz8" firstAttribute="top" secondItem="0Zv-re-57x" secondAttribute="bottom" constant="8" id="20h-MZ-SlX"/>
+                            <constraint firstItem="0Zv-re-57x" firstAttribute="leading" secondItem="S5M-j1-Xd0" secondAttribute="leading" id="CZA-e0-E5u"/>
+                            <constraint firstItem="S5M-j1-Xd0" firstAttribute="trailing" secondItem="pCG-4w-oWX" secondAttribute="trailing" constant="20" id="V0F-XM-Gqn"/>
+                            <constraint firstItem="S5M-j1-Xd0" firstAttribute="bottom" secondItem="pCG-4w-oWX" secondAttribute="bottom" constant="20" id="XHb-RL-puI"/>
+                            <constraint firstItem="pCG-4w-oWX" firstAttribute="leading" secondItem="S5M-j1-Xd0" secondAttribute="leading" constant="20" id="Xoe-I5-RXr"/>
+                            <constraint firstItem="0Zv-re-57x" firstAttribute="top" secondItem="S5M-j1-Xd0" secondAttribute="top" id="XpH-Cw-vb6"/>
+                            <constraint firstItem="vIX-zl-Gz8" firstAttribute="centerX" secondItem="S5M-j1-Xd0" secondAttribute="centerX" id="hcQ-Lh-ka3"/>
+                            <constraint firstItem="pCG-4w-oWX" firstAttribute="top" secondItem="vIX-zl-Gz8" secondAttribute="bottom" constant="8" id="qGa-rN-xfm"/>
+                            <constraint firstItem="S5M-j1-Xd0" firstAttribute="trailing" secondItem="0Zv-re-57x" secondAttribute="trailing" id="qeF-lX-9fE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S5M-j1-Xd0"/>
+                    </view>
+                    <connections>
+                        <outlet property="animalDescriptionLabel" destination="pCG-4w-oWX" id="Ozd-Y8-oyH"/>
+                        <outlet property="animalImageView" destination="0Zv-re-57x" id="oz2-wm-3Mi"/>
+                        <outlet property="animalNameLabel" destination="vIX-zl-Gz8" id="k5o-nW-Gmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUY-5N-yfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="159"/>
+        </scene>
+    </scenes>
+</document>
